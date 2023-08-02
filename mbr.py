@@ -81,11 +81,10 @@ def main():
         file_path = sys.argv[1]
         print("Parsing MBR...")
         print("file path:", file_path) 
-    
-    file_path = 'parse-mbr\mbr_128.dd'
+
     partitions = parse_partition_table(file_path)
-    
-    # 파싱한 파티션 정보를 출력합니다.
+    print("\n")
+          
     for i, partition in enumerate(partitions, 1):
         print(f"[Partition {i}]")
         print("filesystem_name:", partition['filesystem_name'])
