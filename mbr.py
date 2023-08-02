@@ -25,7 +25,6 @@ def parse_partition_table(file_path):
 
     return partition_entries
 
-
 def parse_partition_entry(entry_data, data, base):
     partition_type = entry_data[4]
     starting_lba = int.from_bytes(entry_data[8:12], byteorder='little')
@@ -70,8 +69,6 @@ def parse_ebr_partition(starting_sector, data):
                 done = 1
                 break
                 
-
-
     return extended_partitions
 
 def main():
